@@ -61,7 +61,6 @@ export class AppComponent {
   onShowDetail(id: number) {
     this.service.getPersonaje(id).subscribe((data) => {
       this.personajeDetalle = data;
-      console.log(this.personajeDetalle);
       this.toggleShowDetail();
     });
   }
