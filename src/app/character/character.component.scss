@@ -1,0 +1,44 @@
+@import "src/app/_var.scss";
+
+@mixin p {
+  p {
+    border-bottom: 2px solid $lilac;
+  }
+}
+.table {
+  display: grid;
+  padding-left: 70px;
+  padding-right: 70px;
+  grid-template-columns: repeat(2, 1fr);
+  @include p;
+}
+.character {
+  img {
+    border-radius: 50%;
+  }
+  &-info {
+    @include p;
+  }
+}
+.title {
+  color: $green;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+  font-size: 20px;
+  padding: 0px;
+}
+@media screen and (min-width: 40em) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+}

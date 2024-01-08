@@ -1,0 +1,10 @@
+<header class="header">
+  <button class="header-btn" routerLink="/home">
+    <img [src]="rick" alt="" />
+  </button>
+
+  <div class="filter">
+    <input type="text" placeholder="Search by name" [(ngModel)]="name" (keyup.enter)="onSearch(name, 1)"/>
+    <img [src]="lupita" width="5px" (click)="onSearch(name, 1)"/>
+  </div>
+</header>

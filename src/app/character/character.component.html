@@ -1,0 +1,31 @@
+<div class="grid">
+
+  <div class="character">
+
+    <p class="title">{{ character.name }}</p>
+
+    <img [src]="character.image"/>
+
+    <div class="character-info">
+      <p>
+        <img [src]="status(character.status)" height="12px">
+        Status: {{ character.status }}
+      </p>
+      <p>Type:  {{ character.type }}</p>
+      <p>Species: {{ character.species }}</p>
+      <p>Gender:  {{ character.gender }}</p>
+      <p>Origin:  {{ character.origin.name }}</p>
+      <p>Location:  {{ character.location.name }}</p>
+    </div>
+  </div>
+
+  <div>
+    <p class="title">Episodes</p>
+    <div class="table">
+      <p *ngFor="let episode of episodes"> {{ episode }}</p>
+    </div>
+  </div>
+
+
+
+</div>

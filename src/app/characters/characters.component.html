@@ -1,0 +1,23 @@
+<div class="grid">
+  <div
+    class="card"
+    *ngFor="let result of all.results"
+    (click)="redirect(result.id)"
+  >
+    <p>{{ result.name }}</p>
+    <div class="container-img">
+      <img [src]="result.image" alt="" />
+    </div>
+    <p>{{ result.species }} - {{ result.gender }}</p>
+  </div>
+</div>
+
+<div class="pagination-buttons">
+  <button (click)="previous()" [disabled]="page <= 1">
+    <img [src]="backImg" width="20px">
+  </button>
+  {{ page }} / {{ all.info.pages }}
+  <button (click)="next()" [disabled]="page >= +(+all.info.pages)">
+    <img [src]="nextImg" width="20px">
+  </button>
+</div>

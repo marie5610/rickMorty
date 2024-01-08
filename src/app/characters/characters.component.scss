@@ -1,0 +1,54 @@
+@import 'src/app/_var.scss';
+
+@mixin card {
+  background-color: $lilac;
+  border-radius: 2px;
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+  overflow: hidden;
+}
+.card {
+  @include card;
+}
+.container-img{
+  img{
+    width: 250px;
+    border-top: solid 5px $green;
+    border-bottom: solid 5px $green;
+    cursor: pointer;
+  }
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+}
+// tablets
+@media screen and (min-width: 40em) and (max-width: 63.9em){
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+  }
+}
+// web
+@media screen and (min-width: 64em){
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+  }
+}
+.pagination-buttons{
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+}

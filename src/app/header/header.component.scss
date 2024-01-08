@@ -1,0 +1,50 @@
+@import 'src/app/_var.scss';
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: $header-height;
+  background-color: $lilac;
+  padding: 20px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  &-btn {
+    cursor: pointer;
+    border: none;
+    width: 50px;
+    background-color: $green;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+  }
+}
+.filter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px;
+  margin-right: 30px;
+  img {
+    width: 30px;
+    cursor: pointer;
+  }
+  input {
+    background-color: transparent;
+    border: none;
+    height: 50px;
+    max-width: 150px;
+    outline: none;
+    color: $white;
+    font-size: 20px;
+  }
+  input:focus{
+    border-bottom: solid 2px $white;
+  }
+}
+::placeholder {
+  color: rgba(255, 255, 255, 0.1);
+}
